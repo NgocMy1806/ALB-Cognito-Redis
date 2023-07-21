@@ -11,4 +11,4 @@ pre : " <b> 8. </b> "
 
 ### Nội dung:
   1. [Tạo Redis clusters](./8.1-createcluster)
-  2. [Apply Redis](./8.2-applyRedis/)
+  2. [Apply Redis](./8.2-applyredis/)

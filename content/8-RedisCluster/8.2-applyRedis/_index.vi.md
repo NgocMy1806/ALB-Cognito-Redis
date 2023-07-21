@@ -1,9 +1,9 @@
 ---
 title : "Apply redis cho application"
 date :  "`r Sys.Date()`" 
-weight : 7
+weight : 8
 chapter : false
-pre : " <b> 7.2. </b> "
+pre : " <b> 8.2. </b> "
 ---
 #### Cấu hình file .env và cài predis package
 + Open source code đã giải nén ban nãy bằng IDE như Visual Studio Code, PHP Storm,…

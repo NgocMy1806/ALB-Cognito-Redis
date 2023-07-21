@@ -1,26 +1,24 @@
 ---
-title : "Preparing VPC and EC2"
-date : "`r Sys.Date()`"
-weight : 1
+title : "Register domain"
+date :  "`r Sys.Date()`" 
+weight : 1 
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
+Route 53 is a scalable and highly available Domain Name System (DNS) service provided by AWS. It provides two main services: DNS and domain registration. To perform this lab, you need to prepare a domain that already has an SSL certificate. You can register a domain on Route 53 or register it from another domain provider like GoDaddy, Freenom, etc. and then transfer the DNS service to Route 53.
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+Because Route 53 is not the main content of this lab, I will briefly introduce the basic steps to transfer the DNS service from another domain provider to Route 53, without describing and explaining in detail.
 
-The architecture overview after you complete this step will be as follows:
+Step 1: Register a domain with a domain provider like GoDaddy, Freenom, etc.
 
-![VPC](/images/arc-01.png)
+Step 2: Create a public hosted zone on Route 53. Name the hosted zone the same as the domain.
 
-To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
-  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
-  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
+Step 3: After creating the hosted zone, you will have 4 NS records. Copy these 4 NS records, then access the Nameserver management screen in the domain provider and change the default NS records to the 4 NS records of the hosted zone on Route 53.
 
+Step 4: Changing nameservers may take a few minutes to 24 hours. You can check if the NS record has been updated by opening a command prompt, then enter the command nslookup -q=ns {{domain}}
+![DNS](/images/2.prerequisite/031-nslookup.png)
 
-### Content
-  - [Create VPC](2.1.1-createvpc/)
-  - [Create Public Subnet](2.1.2-createpublicsubnet/)
-  - [Create Private Subnet](2.1.3-createprivatesubnet/)
-  - [Create security group](2.1.4-createsecgroup/)
-  - [Create public Linux server](2.1.5-createec2linux/)
-  - [Create private Windows server](2.1.6-createec2windows/)
+You can refer to the following video for how to do it: https://www.youtube.com/watch?v=L8YTHHweR3M&t=231s
+
+After successfully updating the NS records, move on to the next step to register an SSL certificate for the domain.
+

@@ -3,7 +3,7 @@ title : "Tạo Redis clusters"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
-pre : " <b> 7.1. </b> "
+pre : " <b> 8.1. </b> "
 ---
 
 1. Truy cập vào [giao diện quản trị của dịch vụ Amazon ElastiCache](https://console.aws.amazon.com/elasticache/home).

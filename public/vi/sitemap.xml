@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/vi/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -27,64 +27,28 @@
                 href="/vi/1-introduce/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.2-request-ssl-certificate/</loc>
+    <loc>/vi/2-prerequiste/2.1-domain/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.2-request-ssl-certificate/"
+                href="/2-prerequiste/2.1-domain/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.2-request-ssl-certificate/"
+                href="/vi/2-prerequiste/2.1-domain/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.1-t%E1%BA%A1o-domain/</loc>
+    <loc>/vi/8-rediscluster/8.1-createcluster/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.1-t%E1%BA%A1o-domain/"
+                href="/8-rediscluster/8.1-createcluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.1-t%E1%BA%A1o-domain/"
-                />
-  </url><url>
-    <loc>/vi/3.-t%E1%BA%A1o-alb/3.1-t%E1%BA%A1o-target-group/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3.-t%E1%BA%A1o-alb/3.1-t%E1%BA%A1o-target-group/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3.-t%E1%BA%A1o-alb/3.1-t%E1%BA%A1o-target-group/"
-                />
-  </url><url>
-    <loc>/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.1-t%E1%BA%A1o-user-pool/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.1-t%E1%BA%A1o-user-pool/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.1-t%E1%BA%A1o-user-pool/"
-                />
-  </url><url>
-    <loc>/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.3-alb-authentication-rule/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.3-alb-authentication-rule/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.3-alb-authentication-rule/"
+                href="/vi/8-rediscluster/8.1-createcluster/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/</loc>
@@ -99,125 +63,161 @@
                 href="/vi/2-prerequiste/"
                 />
   </url><url>
-    <loc>/vi/3.-t%E1%BA%A1o-alb/3.2-t%E1%BA%A1o-alb/</loc>
+    <loc>/vi/2-prerequiste/2.2-ssl/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3.-t%E1%BA%A1o-alb/3.2-t%E1%BA%A1o-alb/"
+                href="/2-prerequiste/2.2-ssl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3.-t%E1%BA%A1o-alb/3.2-t%E1%BA%A1o-alb/"
+                href="/vi/2-prerequiste/2.2-ssl/"
                 />
   </url><url>
-    <loc>/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.2-th%E1%BB%AD-t%E1%BA%A1o-t%C3%A0i-kho%E1%BA%A3n/</loc>
+    <loc>/vi/3-cognito/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.2-th%E1%BB%AD-t%E1%BA%A1o-t%C3%A0i-kho%E1%BA%A3n/"
+                href="/3-cognito/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/4.2-th%E1%BB%AD-t%E1%BA%A1o-t%C3%A0i-kho%E1%BA%A3n/"
+                href="/vi/3-cognito/"
                 />
   </url><url>
-    <loc>/vi/3.-t%E1%BA%A1o-alb/</loc>
+    <loc>/vi/2-prerequiste/2.3-vpc/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3.-t%E1%BA%A1o-alb/"
+                href="/2-prerequiste/2.3-vpc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3.-t%E1%BA%A1o-alb/"
+                href="/vi/2-prerequiste/2.3-vpc/"
                 />
   </url><url>
-    <loc>/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/</loc>
+    <loc>/vi/2-prerequiste/2.4-sg/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-c%E1%BA%A5u-h%C3%ACnh-cognito/"
+                href="/2-prerequiste/2.4-sg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-c%E1%BA%A5u-h%C3%ACnh-cognito/"
+                href="/vi/2-prerequiste/2.4-sg/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.3-t%E1%BA%A1o-vpc/</loc>
+    <loc>/vi/4-deploy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.3-t%E1%BA%A1o-vpc/"
+                href="/4-deploy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.3-t%E1%BA%A1o-vpc/"
+                href="/vi/4-deploy/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.4-t%E1%BA%A1o-security-group/</loc>
+    <loc>/vi/5-configalb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.4-t%E1%BA%A1o-security-group/"
+                href="/5-configalb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.4-t%E1%BA%A1o-security-group/"
+                href="/vi/5-configalb/"
                 />
   </url><url>
-    <loc>/vi/5-ki%E1%BB%83m-tra-k%E1%BA%BFt-qu%E1%BA%A3/</loc>
+    <loc>/vi/2-prerequiste/2.5-ec2profile/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-ki%E1%BB%83m-tra-k%E1%BA%BFt-qu%E1%BA%A3/"
+                href="/2-prerequiste/2.5-ec2profile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-ki%E1%BB%83m-tra-k%E1%BA%BFt-qu%E1%BA%A3/"
+                href="/vi/2-prerequiste/2.5-ec2profile/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.5-t%E1%BA%A1o-ec2/</loc>
+    <loc>/vi/6-dns/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.5-t%E1%BA%A1o-ec2/"
+                href="/6-dns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.5-t%E1%BA%A1o-ec2/"
+                href="/vi/6-dns/"
                 />
   </url><url>
-    <loc>/vi/6-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <loc>/vi/7-beforeapplyredis/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cleanup/"
+                href="/7-beforeapplyredis/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cleanup/"
+                href="/vi/7-beforeapplyredis/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.6-t%E1%BA%A1o-website-tr%C3%AAn-ec2/</loc>
+    <loc>/vi/8-rediscluster/8.2-applyredis/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.6-t%E1%BA%A1o-website-tr%C3%AAn-ec2/"
+                href="/8-rediscluster/8.2-applyredis/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.6-t%E1%BA%A1o-website-tr%C3%AAn-ec2/"
+                href="/vi/8-rediscluster/8.2-applyredis/"
+                />
+  </url><url>
+    <loc>/vi/8-rediscluster/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/8-rediscluster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/8-rediscluster/"
+                />
+  </url><url>
+    <loc>/vi/9-test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/9-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/9-test/"
+                />
+  </url><url>
+    <loc>/vi/10-cleanup/</loc>
+    <lastmod>1970-01-01T07:33:43+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/10-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/10-cleanup/"
                 />
   </url><url>
     <loc>/vi/categories/</loc>

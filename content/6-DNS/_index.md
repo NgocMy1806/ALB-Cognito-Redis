@@ -1,23 +1,29 @@
 ---
-title : "Manage session logs"
-date : "`r Sys.Date()`"
-weight : 4
+title : "Configure DNS record"
+date :  "`r Sys.Date()`" 
+weight : 6
 chapter : false
-pre : " <b> 4. </b> "
+pre : " <b> 6. </b> "
 ---
 
 
-With Session Manager, we can view the history of connections to instances through **Session history**. However, we have not seen the details of the commands used in a session.
+   In this step, we will configure route 53 so that when accessing the domain democognito.mymy.asia, the DNS server will point to EB's domain.
+  + Access to [Route53 service management console](https://console.aws.amazon.com/route53/v2/home).
+  + Click on **Hosted zones**.
+  + Click on the name of the Hostes zone you created
+![DNS](/images/6.dns/001.png)
+  + Click **Create record**
+  ![DNS](/images/6.dns/002.png)
+  + In the **Record name** field, input **democognito**.
+  {{% notice info %}}
+  If you want to point the root domain directly to the EB environment, you can leave this field blank
+  {{% /notice %}}
+  + ON toggle **Alias**.
+  + Select route traffic to **Alias to EB enviroment** in region **us-east-1**, then select created EB enviroment.
+  + Click **Create records**
+  ![DNS](/images/6.dns/003.png)
 
-![S3](/images/4.s3/001-s3.png)
-
-In this section, we will proceed to create an S3 bucket and configure the session logs feature to see the details of the commands used in the session.
-
-![port-fwd](/images/arc-log.png) 
-
-### Content:
-
-   - [Update IAM Role](./4.1-updateiamrole/)
-   - [Create **S3 Bucket**](./4.2-creates3bucket/)
-   - [Create S3 Gateway endpoint](./4.3-creategwes3)
-   - [Configure **Session logs**](./4.4-configsessionlogs/)
+      After creating the record successfully, try to access it by pasting the **record name** of the newly created record into the browser.
+      You should now see the browser display the application's index screen.
+     ![DNS](/images/6.dns/004.png)
+ 

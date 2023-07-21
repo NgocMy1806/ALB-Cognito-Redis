@@ -1,91 +1,26 @@
 ---
-title : "Port Forwarding"
+title : "Before applying Redis"
 date :  "`r Sys.Date()`" 
-weight : 5 
+weight : 7 
 chapter : false
-pre : " <b> 5. </b> "
+pre : " <b> 7. </b> "
 ---
+- Type the address **https://subdomain/demo-cognito/** into the browser
 
-{{% notice info %}}
-**Port Forwarding** is a useful way to redirect network traffic from one IP address - Port to another IP address - Port. With **Port Forwarding** we can access an EC2 instance located in the private subnet from our workstation.
-{{% /notice %}}
+     (Substitute your respective subdomain for “subdomain” in the URL)
 
-We will configure **Port Forwarding** for the RDP connection between our machine and **Private Windows Instance** located in the private subnet we created for this exercise.
+- Click **Go to my page**
+ ![DNS](/images/6.dns/004.png)
 
-![port-fwd](/images/arc-04.png) 
+- You will now be navigated to Cognito's Sign in screen. If you do not have an account, please click on the text link **Sign up**, register, then login.
+![test](/images/5.test/002-login.png)
+- Once logged in, you will be redirected to the correct dashboard screen.
+Pay attention to the **EC2 ID** information and the number of times **visit page**.
+- Do F5 continuously, you will see that if you are in EC2-1, next time F5, if you are still navigated into EC2-1, the number of **visit page** will increase by 1 unit. However, if the next F5 you are redirected to EC2-2, the **visit page** will be recounted from 1.
+![test](/images/5.test/1.png)
+![test](/images/5.test/2.png)
+- The reason is because by default, our application will store session and the cache in **file driver**, which means it will be saved directly on the server. Therefore, the sessions on the 2 EC2s are completely unrelated, so when we are redirected to EC2-2, the system will start a new session, not update the existing session.
 
-#### Create IAM user with permission to connect SSM
-
-1. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home)
-   + Click **Users** , then click **Add users**.
-
-![FWD](/images/5.fwd/001-fwd.png)
-
-2. At the **Add user** page.
-   + In the **User name** field, enter **Portfwd**.
-   + Click on **Access key - Programmatic access**.
-   + Click **Next: Permissions**.
-  
-![FWD](/images/5.fwd/002-fwd.png)
-
-3. Click **Attach existing policies directly**.
-   + In the search box, enter **ssm**.
-   + Click on **AmazonSSMFullAccess**.
-   + Click **Next: Tags**, click **Next: Reviews**.
-   + Click **Create user**.
-
-4. Save **Access key ID** and **Secret access key** information to perform AWS CLI configuration.
-
-#### Install and Configure AWS CLI and Session Manager Plugin
-  
-To perform this hands-on, make sure your workstation has [AWS CLI]() and [Session Manager Plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session) installed -manager-working-with-install-plugin.html)
-
-More hands-on tutorials on installing and configuring the AWS CLI can be found [here](https://000011.awsstudygroup.com/).
-
-{{%notice tip%}}
-With Windows, when extracting the **Session Manager Plugin** installation folder, run the **install.bat** file with Administrator permission to perform the installation.
-{{%/notice%}}
-
-#### Implement Portforwarding
-
-1. Run the command below in **Command Prompt** on your machine to configure **Port Forwarding**.
-
-```
-   aws ssm start-session --target (your ID windows instance) --document-name AWS-StartPortForwardingSession --parameters portNumber="3389",localPortNumber="9999" --region (your region)
-```
-{{%notice tip%}}
-
-**Windows Private Instance** **Instance ID** information can be found when you view the EC2 Windows Private Instance server details.
-
-{{%/notice%}}
-
-   + Example command:
-
-```
-C:\Windows\system32>aws ssm start-session --target i-06343d7377486760c --document-name AWS-StartPortForwardingSession --parameters portNumber="3389",localPortNumber="9999" --region ap-southeast-1
-```
-
-{{%notice warning%}}
-
-If your command gives an error like below: \
-SessionManagerPlugin is not found. Please refer to SessionManager Documentation here: http://docs.aws.amazon.com/console/systems-manager/session-manager-plugin-not-found\
-Prove that you have not successfully installed the Session Manager Plugin. You may need to relaunch **Command Prompt** after installing **Session Manager Plugin**.
-
-{{%/notice%}}
-
-2. Connect to the **Private Windows Instance** you created using the **Remote Desktop** tool on your workstation.
-   + In the Computer section: enter **localhost:9999**.
+     To solve this problem, we will use AWS's Amazon ElastiCache Redis to store the session of the servers in the same redis cluster.
 
 
-![FWD](/images/5.fwd/003-fwd.png)
-
-
-3. Return to the administration interface of the System Manager - Session Manager service.
-   + Click tab **Session history**.
-   + We will see session logs with Document name **AWS-StartPortForwardingSession**.
-
-
-![FWD](/images/5.fwd/004-fwd.png)
-
-
-Congratulations on completing the lab on how to use Session Manager to connect and store session logs in S3 bucket. Remember to perform resource cleanup to avoid unintended costs.
